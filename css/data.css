@@ -1,0 +1,335 @@
+
+body,h1,h2,h3,h4,p,dl,dd,ul,ol,form,input,textarea,th,td,select{margin: 0;padding: 0;}
+em{font-style: normal;}
+li{list-style: none;}
+a{text-decoration: none;}
+img{border: none;vertical-align: top;}
+table{border-collapse: collapse;}
+input,textarea{outline: none;}
+textarea{resize:none;overflow: auto;}
+body{font-size:12px;font-family: arial;}
+html,body{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.by{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+}
+
+
+
+.loading{
+  width: 100%;
+  height: 100%;
+  background-color: #3fa9ff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+.loading_div{
+  width: 100%;
+  position: absolute;
+  top: 28%;
+  left: 0;
+  text-align: center;
+}
+.loading_tu{
+  width: 233px;
+  height: 230px;
+  margin: 0 auto;
+  background: url(../img/loading_tu.png) top left no-repeat;
+}
+.loading_tiao{
+  width: 420px;
+  height: 15px;
+  margin: 0 auto;
+  margin-top: 30px;
+  border: 1px solid #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 2px;
+}
+.loading_t{
+  width: 0%;
+  height: 100%;
+  background-color: #ffffff;
+  border-radius: 20px;
+}
+.loading_zi{
+  width: 100%;
+  height: 70px;
+  line-height: 70px;
+  text-align: center;
+  font-size: 30px;
+  color: #ffffff;
+}
+
+
+.logo{
+  width: 150px;
+  height: 52px;
+  background: url(../img/logo.png) center center no-repeat;
+  position: fixed;
+  top: 1%;
+  left: 2%;
+  z-index: 1000;
+}
+
+
+
+.content{
+	width: 640px;
+	height: 1135px;
+	background: url(../img/data_bg.jpg) center center no-repeat;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+}
+.qiu{
+	width: 80px;
+	height: 80px;
+	background: url(../img/bullet1.png) center center no-repeat;
+	position: absolute;
+	top: 320px;
+	left: 50%;
+	margin-left: -51px;
+	-webkit-animation: qiu 5s linear infinite;
+}
+.touxiang1{
+	width: 204px;
+	height: 156px;
+	background: url(../img/data_tou_1.png) center center no-repeat;
+	position: absolute;
+	top: 520px;
+	left: 50%;
+	margin-left: -244px;
+	-webkit-animation: touxiang1 5s linear both;
+}
+.touxiang1_img{
+	width: 108px;
+	height: 108px;
+	position: absolute;
+	top: 21px;
+	left: 52px;
+	-webkit-mask-image:url(../img/touxiang_mengban.png);
+	-webkit-mask-repeat:no-repeat;
+	-webkit-mask-position: 0px 0px;
+}
+.touxiang2{
+	width: 204px;
+	height: 156px;
+	background: url(../img/data_tou_2.png) center center no-repeat;
+	position: absolute;
+	top: 520px;
+	left: 360px;
+	-webkit-animation: touxiang2 5s linear both;
+}
+.touxiang2_img{
+	width: 108px;
+	height: 108px;
+	position: absolute;
+	top: 21px;
+	right: 52px;
+	-webkit-mask-image:url(../img/touxiang_mengban.png);
+	-webkit-mask-repeat:no-repeat;
+	-webkit-mask-position: 0px 0px;
+}
+.vs{
+	width: 130px;
+	height: 91px;
+	background: url(../img/data_vs.png) center center no-repeat;
+	position: absolute;
+	top: 560px;
+	left: 50%;
+	margin-left: -65px;
+}
+.yingzhan{
+	display: block;
+	width: 249px;
+	height: 134px;
+	background: url(../img/data_anniu_yingzhan.png) center center no-repeat;
+	position: absolute;
+	top: 720px;
+	left: 50%;
+	margin-left: -249px;
+}
+.yingzhan>img{
+	-webkit-animation: anniu 1.5s ease both infinite;
+}
+.shiwan{
+	display: block;
+	width: 196px;
+	height: 87px;
+	background: url(../img/data_anniu_shiwan.png) center center no-repeat;
+	position: absolute;
+	top: 735px;
+	left: 340px;
+}
+
+
+
+
+
+/*球动画*/
+@-webkit-keyframes qiu {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100%{
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+
+
+
+
+
+/*touxiang1动画*/
+@-webkit-keyframes touxiang1 {
+  0% {
+    -webkit-transform: translateX(-300px);
+  }
+  10%{
+  	-webkit-transform: translateX(0px);
+  }
+  15%{
+  	-webkit-transform: translateX(-80px);
+  }
+  20%{
+  	-webkit-transform: translateX(0px);
+  }
+  25%{
+  	-webkit-transform: translateX(-40px);
+  }
+  30%{
+  	-webkit-transform: translateX(0px);
+  }
+  35%{
+  	-webkit-transform: translateX(-20px);
+  }
+  40%{
+  	-webkit-transform: translateX(0px);
+  }
+  45%{
+  	-webkit-transform: translateX(-10px);
+  }
+  50%{
+  	-webkit-transform: translateX(0px);
+  }
+  55%{
+  	opacity: 1;
+  }
+  60%{
+  	opacity: 0.5;
+  }
+  65%{
+  	opacity: 1;
+  }
+  70%{
+  	opacity: 0.5;
+  }
+  75%{
+  	opacity: 1;
+  }
+  80%{
+  	opacity: 0.5;
+  }
+  85%{
+  	opacity: 1;
+  }
+  90%{
+  	opacity: 1;
+  }
+  100%{
+    -webkit-transform: translateX(0px);
+  }
+}
+/*touxiang2动画*/
+@-webkit-keyframes touxiang2 {
+  0% {
+    -webkit-transform: translateX(300px);
+  }
+  10%{
+  	-webkit-transform: translateX(0px);
+  }
+  15%{
+  	-webkit-transform: translateX(80px);
+  }
+  20%{
+  	-webkit-transform: translateX(0px);
+  }
+  25%{
+  	-webkit-transform: translateX(40px);
+  }
+  30%{
+  	-webkit-transform: translateX(0px);
+  }
+  35%{
+  	-webkit-transform: translateX(20px);
+  }
+  40%{
+  	-webkit-transform: translateX(0px);
+  }
+  45%{
+  	-webkit-transform: translateX(10px);
+  }
+  50%{
+  	-webkit-transform: translateX(0px);
+  }
+  55%{
+  	opacity: 1;
+  }
+  60%{
+  	opacity: 1;
+  }
+  65%{
+  	opacity: 0.5;
+  }
+  70%{
+  	opacity: 1;
+  }
+  75%{
+  	opacity: 0.5;
+  }
+  80%{
+  	opacity: 1;
+  }
+  85%{
+  	opacity: 0.5;
+  }
+  90%{
+  	opacity: 1;
+  }
+  100%{
+    -webkit-transform: translateX(0px);
+  }
+}
+
+
+
+
+
+
+
+/*按钮动画*/
+@-webkit-keyframes anniu {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale3d(1,1,1);
+  }
+  100%{
+    opacity: 0;
+    -webkit-transform: scale3d(1.2,1.2,1.2);
+  }
+}
+
+

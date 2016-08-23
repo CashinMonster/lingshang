@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script type="text/javascript" src="./js/phone.js"></script>
+	<title>领尚生活-咕叽大爆走</title>
+	<link rel="stylesheet" type="text/css" href="./css/index.css">
+</head>
+<body>
+<div class="by">
+
+<audio loop="loop" autoplay="autoplay" id="musicbg">
+  	<source src="./music/bgmusic.mp3" type="audio/mpeg">
+</audio>
+<audio loop="loop" preload="auto" id="musicbullet">
+  	<source src="./music/bullet.mp3" type="audio/mpeg">
+</audio>
+
+<audio preload="auto" id="musice1">
+  	<source src="./music/enemy1.mp3" type="audio/mpeg">
+</audio>
+<audio preload="auto" id="musice2">
+  	<source src="./music/enemy1.mp3" type="audio/mpeg">
+</audio>
+<audio preload="auto" id="musice3">
+  	<source src="./music/enemy1.mp3" type="audio/mpeg">
+</audio>
+<audio preload="auto" id="musice4">
+  	<source src="./music/enemy1.mp3" type="audio/mpeg">
+</audio>
+<audio preload="auto" id="musice5">
+  	<source src="./music/enemy1.mp3" type="audio/mpeg">
+</audio>
+
+<audio preload="auto" id="musicover">
+  	<source src="./music/game_over.mp3" type="audio/mpeg">
+</audio>
+<audio preload="auto" id="musicbomb">
+  	<source src="./music/bomb.mp3" type="audio/mpeg">
+</audio>
+
+	<!-- loading -->
+	<div class="loading">
+		<div class="loading_div">
+			<div class="loading_tu"></div>
+			<div class="loading_tiao">
+				<div class="loading_t"></div>
+			</div>
+			<div class="loading_zi">
+				0%&nbsp;loading...
+			</div>
+		</div>
+	</div>
+
+	<!-- logo -->
+	<div class="logo"></div>
+
+	<!-- 插画页 -->
+	<div class="chahua">
+		<div class="chahua_neirong">
+			<div class="chahua1">
+				<div class="chahua1_hua1"></div>
+				<div class="chahua1_hua2"></div>
+			</div>
+			<div class="chahua2">
+				<div class="chahua2_hua1"></div>
+				<div class="chahua2_hua2"></div>
+				<div class="chahua2_hua3"></div>
+				<div class="chahua2_hua4"></div>
+			</div>
+			<div class="chahua3"></div>
+		</div>
+	</div>
+
+	<!-- 首页 -->
+	<div class="shouye">
+		<div class="shouye_guaiwu"></div>
+		<div class="shouye_biaoti"></div>
+		<div class="shouye_qiu"></div>
+		<div class="shouye_kaishi"></div>
+		<div class="shouye_paihangbang"></div>
+		<div class="shouye_jiangpin"></div>
+	</div>
+
+	<!-- 规则页 -->
+	<div class="guize"></div>
+
+	<!-- 游戏页面 -->
+	<canvas id="canvas1" width="640" height="968"></canvas>
+
+	<!-- 对手分数 -->
+	<div class="duishou_fenshu">
+		<img src="./img/erweima.png" alt="" class="duishou_touxiang">
+		<div class="duishou_fenshu_shuzi">66666分</div>
+	</div>
+
+	<!-- 游戏结束页面 -->
+	<div id="over">
+
+
+
+		<!-- 新纪录弹窗 -->
+		<div class="game1">
+			<div class="guji1"></div>
+			<div class="fenshuxinxi1">
+				<div>
+					哇噻<br>创新纪录~
+				</div>
+				<p>
+					250分!
+				</p>
+			</div>
+			<div class="anniu_pk1"></div>
+			<div class="anniu_zailaiyici1"></div>
+			<div class="anniu_paihangbang1"></div>
+			<div class="anniu_zhuce"></div>
+		</div>
+
+		<!-- 没破纪录弹窗 -->
+		<div class="game2">
+			<div class="guji2"></div>
+			<div class="fenshuxinxi2">
+				<div>
+					咕叽大暴走结束了 …
+				</div>
+				<p>
+					250分!
+				</p>
+			</div>
+			<div class="anniu_pk2"></div>
+			<div class="anniu_zailaiyici2"></div>
+			<div class="anniu_paihangbang2"></div>
+			<div class="anniu_zhuce"></div>
+		</div>
+
+		<!-- 挑战成功弹窗 -->
+		<div class="game3">
+			<div class="guji3"></div>
+			<div class="fenshuxinxi3">
+				<div>
+					哈哈，太容易啦完爆XXX
+				</div>
+				<p>
+					250分!
+				</p>
+			</div>
+			<div class="anniu_pk3"></div>
+			<div class="anniu_zailaiyici3"></div>
+			<div class="anniu_paihangbang3"></div>
+			<div class="anniu_zhuce"></div>
+		</div>
+
+		<!-- 挑战失败弹窗 -->
+		<div class="game4">
+			<div class="guji4"></div>
+			<div class="fenshuxinxi4">
+				<div>
+					呜呜！差点就可以超过XXXX
+				</div>
+				<p>
+					250分!
+				</p>
+			</div>
+			<div class="anniu_bufu"></div>
+			<div class="anniu_paihangbang4"></div>
+			<div class="anniu_zhuce"></div>
+		</div>
+	</div>
+
+	<!-- 关注弹窗 -->
+	<div class="guanzhu">
+		<div class="guanzhu_tan">
+			<img src="./img/erweima.png" alt="">
+		</div>
+	</div>
+
+	<!-- 奖品弹窗 -->
+	<div class="tan_jiangpin">
+		<div class="jiangpin">
+			<a href="javascript:void(0)"></a>
+			<div class="jiangpin_guanbi"></div>
+		</div>
+	</div>
+
+	<!-- 排行榜弹窗 -->
+	<div class="tan_paihangbang">
+		<div class="paihangbang">
+			<div class="paihangbang_biaoti"></div>
+			<div class="paihangbang_paiming">
+				<div class="paihangbang_paiming_xinxi">
+					<div class="paihangbang_paiming_jiangpai">
+						99
+					</div>
+					<div class="paihangbang_paiming_touxiang">
+						<img src="./img/anniu_guanbi.png" alt="">
+					</div>
+					<div class="paihangbang_paiming_mingzi">
+						<span class="paihangbang_paiming_mingzi_left">
+							无敌小蜜蜂
+						</span>
+						<span class="paihangbang_paiming_mingzi_right">
+							934857分
+						</span>
+					</div>
+					<div class="paihangbang_paiming_lihe"></div>
+				</div>
+
+				<div class="paihangbang_paiming_xinxi">
+					<div class="paihangbang_paiming_jiangpai">
+						99
+					</div>
+					<div class="paihangbang_paiming_touxiang">
+						<img src="./img/anniu_guanbi.png" alt="">
+					</div>
+					<div class="paihangbang_paiming_mingzi">
+						<span class="paihangbang_paiming_mingzi_left">
+							无敌小蜜蜂
+						</span>
+						<span class="paihangbang_paiming_mingzi_right">
+							934857分
+						</span>
+					</div>
+					<div class="paihangbang_paiming_lihe"></div>
+				</div>
+			</div>
+			<div class="paihangbang_huojiangtishi">
+				排行榜成绩截止至12月26日<br>获奖详情请看下期推文
+			</div>
+			<div class="paihangbang_guanbi"></div>
+		</div>
+	</div>
+
+</div>
+</body>
+<script type="text/javascript" src="./js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="./js/index.js"></script>
+</html>
